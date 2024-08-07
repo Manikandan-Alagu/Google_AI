@@ -37,7 +37,7 @@ def model(input):
 
 with gr.Blocks() as demo:
 
-    inputs = gr.Textbox(placeholder="Let Chat")
+    inputs = gr.Textbox(placeholder="Let Chat",value="Hi there")
     outputs = gr.Textbox()
     inputs.change(model, inputs, outputs)
 
