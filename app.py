@@ -35,11 +35,11 @@ def model(input):
 
     return response.text
 
-with gr.Blocks() as demo:
 
-    inputs = gr.Textbox(placeholder="Let Chat",value="Hi there")
-    outputs = gr.Textbox()
-    inputs.change(model, inputs, outputs)
+
+inputs = gr.Textbox(placeholder="Let Chat")
+outputs = gr.Textbox()
+demo  = gr.Interface(model, inputs, outputs)
 
 if __name__ == "__main__":
     demo.launch()
