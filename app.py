@@ -35,9 +35,9 @@ def model(input):
 
     return response.text
 
-
-
-demo = gr.Interface(fn=model, inputs="textbox", outputs="textbox")
+inputs = gr.Textbox(placeholder="Let Chat")
+outputs = gr.Textbox()
+demo = inputs.change(model, inputs, outputs)
 
 if __name__ == "__main__":
     demo.launch()
