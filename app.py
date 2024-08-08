@@ -25,7 +25,7 @@ chat_session = model.start_chat(
     history=[]
 )
 
-input = input()
+input = "How are you"
 
 def chat(input):
     response = chat_session.send_message(input)
